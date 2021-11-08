@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+/* loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: #7dba28;
+  z-index: 1000000;
+}
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 6px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 60px;
+    left: 60px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+  }
+}
+
+/* loader */
+/* saidbar */
+.saidbar {
+  box-shadow: 0 10px 25px#7dba28;
+  transform: translate(-120%);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  background-color: #7dba28;
+  transition: all 0.3s ease;
+}
+.newtranslate {
+  transform: translate(0);
+}
+.avator {
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.avator img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.avator span {
+  color: white;
+  padding: 20px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.saidbar-main h2 {
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+.saidbar-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.saidbar-item {
+  cursor: pointer;
+  color: white;
+  padding: 8px;
+}
+/* content */
+.content {
+  padding: 20px;
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content h2 {
+  color: #7dba28;
+  font-weight: bold;
+}
+.saidbar-content {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
+}
+.saidbar-content img {
+  border-radius: 30px;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+.saidbat-text {
+  padding: 20px;
+  text-align: center;
+  color: #7dba28;
+  font-size: 0.8rem;
+}
+/* js */
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.active {
+  color: rgb(49, 43, 45);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+/* toggle */
+.toggle {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.toggle i {
+  font-size: 2.2rem;
+  color: #7dba28;
+}
